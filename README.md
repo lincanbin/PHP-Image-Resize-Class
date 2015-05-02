@@ -1,6 +1,6 @@
 PHP-Image-Resize-Class
 ======================
-A PHP class which can resize the image easily.
+Automatic extract the square central part of the uploaed image, and zoom to the specified size.
 
 Parameters
 ------------

@@ -26,7 +26,7 @@ echo $UploadAvatarMessage;
 ?>
 	</p>
 	<p>
-		<input type="file" name="Avatar">
+		<input type="file" name="Avatar" accept="image/*" />
 	</p>
 	<p>
 		<input type="submit" value="Upload and Resize" name="submit" />
