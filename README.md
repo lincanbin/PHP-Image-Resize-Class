@@ -1,6 +1,6 @@
 PHP-Image-Resize-Class
 ======================
-Automatic extract the square central part of the uploaed image, and zoom to the specified size.
+Automatic extract the square central part of the uploaded image, and zoom to the specified size.
 
 Parameters
 ------------

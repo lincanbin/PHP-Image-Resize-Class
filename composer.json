@@ -1,0 +1,21 @@
+{
+    "name": "lincanbin/php-image-resize-class",
+    "keywords": [
+        "image",
+        "resize",
+        "zoom",
+        "square",
+        "upload"
+    ],
+    "description": "Automatic extract the square central part of the uploaded image, and zoom to the specified size. ",
+    "license": "Apache License, Version 2.0",
+    "authors": [
+        {
+            "name": "lincanbin",
+            "email": "lincanbin@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.0"
+    }
+}
