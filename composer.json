@@ -8,7 +8,7 @@
         "upload"
     ],
     "description": "Automatic extract the square central part of the uploaded image, and zoom to the specified size. ",
-    "license": "Apache License, Version 2.0",
+    "license": "Apache License Version 2.0",
     "authors": [
         {
             "name": "lincanbin",
