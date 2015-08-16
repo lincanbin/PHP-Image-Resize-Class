@@ -3,10 +3,10 @@ $UploadAvatarMessage = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($_FILES['Avatar']['size'] && $_FILES['Avatar']['size'] < 1048576) {
 		require(dirname(__FILE__) . "/src/ImageResize.class.php");
-		$UploadAvatar  = new ImageResize('Avatar');
-		$LUploadResult = $UploadAvatar->Resize(256, 'large.png', 100);
-		$MUploadResult = $UploadAvatar->Resize(48, 'middle.png', 90);
-		$SUploadResult = $UploadAvatar->Resize(24, 'small.png', 90);
+		$UploadAvatar  = new ImageResize('PostField', 'Avatar');
+		$LUploadResult = $UploadAvatar->Resize(256, 'upload_large.png', 100);
+		$MUploadResult = $UploadAvatar->Resize(48, 'upload_middle.png', 90);
+		$SUploadResult = $UploadAvatar->Resize(24, 'upload_small.png', 90);
 		if ($LUploadResult && $MUploadResult && $SUploadResult)
 			$UploadAvatarMessage = 'Success';
 		else
