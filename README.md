@@ -16,13 +16,27 @@ upload/avatar/large.png: save path
 
 Example
 ------------
+#### Resize image from post field: 
 ```php
-$UploadAvatar = new ImageResize('Avatar');
+$UploadAvatar = new ImageResize('PostField', 'Avatar');
+$Result = $UploadAvatar->Resize(256, 'upload/avatar/large.png', 80);
+```
+#### Resize image from Web: 
+```php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_URL, 'https://avatars0.githubusercontent.com/u/5785188?v=3&s=460');
+$response =  curl_exec($ch);
+curl_close($ch);
+
+$UploadAvatar = new ImageResize('String', $response);
 $Result = $UploadAvatar->Resize(256, 'upload/avatar/large.png', 80);
 ```
 
 License
 ------------
+```
 Copyright 2006-2015 Canbin Lin (lincanbin@hotmail.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,3 +50,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
